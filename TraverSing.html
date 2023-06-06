@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY-Traver -Sing</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 5px;
+        }
+
+        .selected {
+            background: gold;
+            padding: 10px;
+            border: 10px solid rgb(0 0 0 /50%);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <b>Article</b>
+        <section>
+            <strong>This is a section</strong>
+            <p>this is a TraverSing -Html in Jquery</p>
+        </section>
+    </article>
+    <script>
+        $(function () {
+            //$('p').addClass('selected')
+            $('p').parent('section').addClass('selected')
+            //$('p').parents().addClass('selected')
+            //$('section p').parentsUntil('article').addClass('selected')
+        })
+    </script>
+</body>
+</html>

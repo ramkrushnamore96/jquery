@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        h1 {
+            padding: 10px;
+        }
+        .background {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <button id="addBackground">Add background</button>
+    <button id="removeBackgrooound">Remove background</button>
+    <button id="toggleBackground">Toggle background</button>
+
+    <h1>This is a heading</h1>
+
+    <script>
+        $(function() {
+            $('#addBackground').on('click',function(){
+                $('h1').addClass('background')
+            })
+            $('#removeBackground').on('click', function(){
+                $('h1').removeClass('background')
+            })
+            $('#removeBackground').on('click',function(){
+                $('h1').toggleClass('background')
+
+            })
+        })
+    </script>
+</body>
+</html>

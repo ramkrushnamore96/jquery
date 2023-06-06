@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY - Sets</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <button>Click here</button>
+    <h1>This is a heading</h1>
+    <a href="https://abc.com">Link</a>
+
+    <script>
+        $(function(){
+            $('button').on('click',function(){
+                $('a').attr({
+                    'href':'https://abc.com',
+                    'title':'This is a title'
+                })
+                $('h1').html('<i>This is another text</i>')
+                //$('h1').text('<i>This is another text</i>')
+            })
+        })
+    </script>
+
+</body>
+</html>

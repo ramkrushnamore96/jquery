@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquey - siblings</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .border {
+            border:10px solid goldenrod;
+            padding: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <p class="child-paragraph">This is child-paragraph</p>
+            <section>This is section</section>
+            <p>This is second Paragraph</p>
+            <a href="javascript:void(0)" class="child-anchor">This is child anchor</a>
+            <p>This is last child Paragraph</p>
+        </section>
+    </article>
+
+    <p>This is fourth paragraph</p>
+    <p>This is fifth paragrph</p>
+
+    <script>
+        $(function () {
+            //$('.child-paragraph').siblings().addClass('border')
+            //$('.child-paragraph').next().addClass('border')
+            //$('.child-paragraph').nextAll().addClass('border')
+            //$('.child-paragraph').nextUntil('a').addClass('border')
+            //$('.child-anchor').prev().addClass('border')
+            //$('.child-anchor').prevAll().addClass('border')
+
+            $('section p:last-child').prevUntil('section').addClass('border')
+        })
+    </script> 
+</body>
+</html>

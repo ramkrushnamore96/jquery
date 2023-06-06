@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .background {
+            background: lawngreen;
+            color: blue;
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <p>This is a paragraph</p>
+            <section>
+                This is a section
+            </section>
+
+            <p class="middle-element">Middle element</p>
+            <a href="javascript:void(0)">This is link</a>
+            <p>Last paragraph</p>
+        </section>
+    </article>
+    <p>This is fourth paragraph</p>
+    <p>This is last paragraph of the page</p>
+
+    <script>
+        //syntax:.first(), .last(), .eq(), .filter(), .not()
+
+        $(function(){
+            $('p').first().addClass('background')
+            $('p').last().addClass('background')
+            $('p').eq(3).addClass('background')
+            $('p').filter('.middle-element').addClass('background')
+            $('p').not('.midddle-element').addClass('background')
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery - Callback</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        output {
+            display: none;
+            width: 250px;
+            height: 250px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .lightblue {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle">Slide Toggle</button>
+    <output>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, non! Fuga harum cupiditate asperiores
+        repellendus itaque eligendi, laborum voluptates fugit laboriosam ducimus reiciendis nisi, ut blanditiis facilis
+        inventore aliquid at.</output>
+<script>
+    $(function () {
+        $('.toggle').on('click', function() {
+            $('output').toggle(2500, function() {
+                $(this)
+                .addClass('lightblue')
+                .css({'border-radius': '50%'})
+            })
+        })
+    })
+</script>
+</body>
+</html>

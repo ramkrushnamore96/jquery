@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .selected {
+            background: greenyellow;
+            padding: 10px;
+            border: 2px solid rgba(238, 8, 27, 0.5);
+            border-radius: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <b>Article</b>
+        <section>
+           <p>This Pragraph is child element of Section</p> 
+           <p>This is another Paragraph 1</p>
+        <section>
+        <p>This is another Paragraph 2</p>
+        </section>
+        <script>
+            $(function(){
+                $('section').children('p').addClass('selected')
+                //$('section').find('p').addClass('selected')
+            })
+        </script>
+</body>
+</html>

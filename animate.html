@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>JQUERY - ANIMATE</title>
+    <style>
+        section {
+            width: 200px;
+            height: 200px;
+            background: gold;
+            margin-top: 20px;   
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <button>Animate it</button>
+    <section></section>
+    <script>
+        $(function () {
+            $('button').on('click', function () {
+                $('section').animate(
+                    {
+                        'margin-left': '250px',
+                        'border-radius':'50%',
+                        'background-color':'gold'
+                    }, 'slow')
+            })
+        })
+    </script>   
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery -- Events</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        section {
+            margin-top: 10%;
+            width: 200px;
+            height: 200px;
+            background: lightblue;
+        }
+
+        .lightgreen {
+            background: lightgreen;
+        }
+
+        .dodgerblue {
+            background: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Click here</button>
+    <section></section>
+
+    <script>
+        $(function () {
+            $('button').click(function(){
+                $('section').addClass('lightgreen')
+            })
+
+            $('section').on({
+                'mouseenter': function(){
+                    $('section').addClass('dodgerblue')
+                },
+                'mouseleave': function(){
+                    $('section').removeClass('dodgerblue')
+                }
+            })
+        })
+    </script>
+</body>
+</html>

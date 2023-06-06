@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> j-Query - Dimensions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        output {
+            display: block;
+            background: lawngreen;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            text-align: center;
+            border: 10px solid rgb(0 0 0 / 20%);
+            font-size: 16px;
+            margin: 10% auto;
+        }
+    </style>
+</head>
+<body>
+    <button>Get width and Height</button>
+    <output></output>
+    <script>
+        //syntax:.width(),.height(), .innerWidth(),.innerHeight(), .outerHeight(),.outerWidth(), .outerHeight()
+
+        $(function(){
+            $('button').on('click',function(){
+                $('output')
+                .width(250)
+                .height(250)
+                .html(
+                    'Width:'+ $('output').width() + 'px <br>'
+                    + 'Height:' + $('output').width() + 'px <br>'
+                    + 'Inner width:' + $('output').innerWidth() + 'px < br>'
+                    + 'Inner height:' + $('output') .innerHeight() + 'px <br>'
+                    + 'Outer width:' + $('output') .outerWidth() + 'px <br>'
+                    + 'Outer height:' + $('output').outerHeight() + 'px <br>'
+                )
+            })
+        })   
+    </script>  
+</body>
+</html>

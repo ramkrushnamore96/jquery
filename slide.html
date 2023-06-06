@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <button class="slideDown">Slide Down</button>
+    <button class="slideUp">Slide up</button>
+    <button class="slideToggle">Slide Toggle</button>
+    <output>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</output>
+    <script>
+        $(function () {
+            $('.slideDown').on('click', function () {
+                $('output').slideDown(2500)
+            })
+
+            $('.slideUp').on('click', function () {
+                $('output').slideUp(2500)
+            })
+            
+            $('.slideToggle').on('click', function () {
+                $('output').slideToggle(2500)
+            })
+        })
+    </script>
+</body>
+</html>
